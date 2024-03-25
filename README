@@ -1,0 +1,53 @@
+CIOATA DRAGOS ROBERT 325CC
+
+PROBLEMA 1
+
+    Pe scurt implementarea: Vom imparti problema in 2 parti. Aflarea raspunsului daca au fost sau nu eliberati prizonierii si afisarea
+ciclurilor. In prima parte vom parcurge vectorul prin intermediul a 2 loop uri simultane, primul reprezentand prizonierii de la primul
+la ultimul, iar cel de al 2 lea modul in care vom parcurge din cutia deschisa in cutia indicata de numarul acesteia. Al 2 lea loop se
+va efectua de n/2 ori conform enuntului problemei, iar pentru fiecare prizonier care si a gasit cutia vom incrementa un contor. La final
+daca contorul va fi egal cu numarul de prizonieri inseamna ca fiecare si a gasit cutia deci ei au reusit sa scape. A 2 a parte a problemei
+o reprezinta afisarea ciclurilor determinate de saltul din cutie in cutie conform problemei. Astfel vom parcurge tot prin intermediul 
+a 2 loop uri. in primul vectorul in ordine, iar in al 2 lea nu ne vom mai opri la n/2 si vom continua intreaga dimensiune a vectorului
+in cazul in care nu se gaseste niciun ciclu mai scurt si putem relua cautarea de la urmatorul element al primului loop. Modul de implementare 
+efectiva a functiilor se regaseste in comentariile din cod
+
+
+    A durat mai mult intelegerea efectiva a problemei, a enuntului. Partea in care verificam daca prizonierii au scapat sau nu a fost 
+foarte rapida dar pentru afisarea ciclurilor au fost necesare multe incercari. Deci in total a durat cateva ore pentru intelegerea efectiva,
+scrierea si debug ul problemei si am realizat o in cadrul aceeasi zi.
+
+PROBLEMA 2
+    
+    Pe scurt implementarea: Cat timp operatia citita nu este 0 vom citi la nesfarsit numere si vom efectua calcule intre rezultatul anterior
+returnat de functiile de calcul si valoarea citita la moment. Afisarea se face la finalul functiilor de calcul iar returnarea este facuta 
+ca parametru de tip pointer la string. In functiile de calcul vom imparti cele 2 numere in partile lor reale si imaginare si in bitul de
+semn pentru cele patru. In functie de conditiile din tabelul de mai jos vom efectua calculul la care vom folosi functiile adunare() si 
+scadere(). Modul de implementare efectiva a functiilor se regaseste in comentariile din cod
+
+
+    A durat destul de mult implementarea acestei probleme avand foarte multe erori atat pe parcurs cat si la finalul realizarii. Majoritatea
+acestora au fost in lucrul cu string urile, eliminarea caracterelor garbage obtinute pe parcurs, cast urile gresite etc. Deci in total a durat undeva la 3-4 zile cu mai multe ore pe zi.
+
+    Cazurile de la problema 2 din cele 2 functii auxiliare au fost efectuate dupa principiul tabelului urmator. au fost explicate pe scurt
+si in comentarii
+
+Pentru functia calculplus()
+							
+BITREALA	BITREALB	BITREALA	REALA	                            caz A>B	                    BITREALA       	caz A<B	        BITREALA  
+0           	0	        0	    "adunare(reala,realb)"				
+0	            1	        ?	        ?	                            "scadere(reala,realb)"  	0	        "scadere(realb,reala)"	1
+1	            0	        ?	        ?	                            "scadere(reala,realb)"   	1	        "scadere(realb,reala)"	0
+1	            1	        1	    "adunare(reala,realb)"				
+							
+	
+Pentru functia calculminus()
+						
+BITREALA	BITREALB	BITREALA	REALA	                            caz A>B	                    BITREALA	    caz A<B	        BITREALA
+0	            0	        ?	        ?	                            "scadere(reala,realb)"	    0	        "scadere(realb,reala)"	1
+0	            1	        0	    "adunare(reala,realb)"				
+1	            0	        1	    "adunare(reala,realb)"				
+1              	1	        ?	        ?	                            "scadere(reala,realb)"  	1	        "scadere(realb,reala)"	0
+							
+
+
